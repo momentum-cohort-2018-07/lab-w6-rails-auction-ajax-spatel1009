@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
 
   resources :items
-  resources :bids
+  resources :bids 
+ 
+
+  
 
   root 'items#index'
 end
