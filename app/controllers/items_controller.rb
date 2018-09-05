@@ -6,7 +6,8 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @bid = Bid.new(item: @item, amount: @item.next_bid_amount)
+    @bid = Bid.new(item: @item, amount: @item.next_bid_amount
+    )
   end
 
   def new

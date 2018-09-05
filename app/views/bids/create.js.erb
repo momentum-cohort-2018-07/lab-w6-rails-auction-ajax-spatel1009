@@ -1,0 +1,12 @@
+$("#newBidAlert").text("New Bid Accepted! Place another bid...");
+
+updateBid();
+
+var intervalID = window.setInterval(updateBid, 5000);
+
+function updateBid() {
+    var $bidAmount = parseInt(<%= @bid.amount %>);
+    var $nextAmount = $bidAmount + 10;
+    $("#highestBid").text(`$${$bidAmount}`);
+    $("#bid_amount").attr("value", $nextAmount);
+}
